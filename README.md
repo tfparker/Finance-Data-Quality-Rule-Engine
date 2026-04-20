@@ -304,50 +304,15 @@ Documentation covers:
 
 ##
 
-Suggested File Structure
-
-finance-data-quality-rule-engine/
-├── main.py
-├── requirements.txt
-├── test_app.py
-├── test_ingestion_risks.py
-├── README.md
-├── docs/
-│   ├── BRD.md
-│   ├── FRD.md
-│   ├── TESTING.md
-│   └── UAT.md
-├── sample_data/
-│   ├── sample_trade_transactions_100.csv
-│   ├── valid_trade_sample.csv
-│   ├── dirty_trade_sample.csv
-│   ├── header_only.csv
-│   ├── header_only_sheet.xlsx
-│   └── unsupported_file.txt
-└── reports/
-    └── sample_exception_report.csv
-
-Actual file structure may vary depending on the Replit project export.
-
-##
-
 How to Run Locally
-
-Install dependencies:
-
-pip install -r requirements.txt
-
-Run the API:
-
-uvicorn main:app --host 0.0.0.0 --port 8000
-
-Open Swagger UI:
-
-http://localhost:8000/docs
-
-Run tests:
-
-python -m pytest -v
+  Install dependencies:
+  pip install -r requirements.txt
+  Run the API:
+  uvicorn main:app --host 0.0.0.0 --port 8000
+  Open Swagger UI:
+  http://localhost:8000/docs
+  Run tests:
+  python -m pytest -v
 
 ##
 
