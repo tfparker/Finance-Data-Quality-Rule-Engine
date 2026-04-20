@@ -1,2 +1,7 @@
 ##Unsupported File: Text - Finance Data Quality Rule Engine
 ##Copyright © 2026 Tripp Parker 
+
+This is a plain text file used to confirm unsupported file type handling.
+
+Expected behavior:
+The API should reject this file as unsupported because it is not CSV or XLSX.
