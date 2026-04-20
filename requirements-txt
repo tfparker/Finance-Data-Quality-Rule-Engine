@@ -1,2 +1,69 @@
 ##Requirements - Finance Data Quality Rule Engine
 ##Copyright © 2026 Tripp Parker 
+
+# Project Requirements Summary
+
+## Finance Data Quality Rule Engine — v1
+
+##Note: This is a public-safe requirements summary for the prototype repository. Full BRD/FRD artifacts were maintained privately during development.
+
+## 1. Project Purpose
+
+Finance Data Quality Rule Engine — v1 is a lightweight Python/FastAPI prototype for deterministic validation of uploaded CSV/XLSX finance datasets.
+
+The system is designed to identify common data quality and control-readiness issues in transaction-style datasets before those files are used for reporting, reconciliation, analysis, or governance review.
+
+## 2. Core Requirements
+
+The application should:
+
+- Accept CSV and XLSX uploads.
+- Profile uploaded files.
+- Run deterministic data quality checks.
+- Apply a default finance transaction control pack.
+- Return structured JSON scan results.
+- Provide audit metadata for each scan.
+- Make a downloadable exception report available through user-initiated export.
+- Preserve long numeric identifiers as strings to reduce precision-loss risk.
+- Warn clearly on common ingestion and data hygiene issues.
+- Reject unsupported or unreadable files with controlled errors.
+
+---
+
+## 3. Required API Endpoints
+
+| Endpoint | Method | Requirement |
+|---|---|---|
+| `/` | GET | Return service information |
+| `/health` | GET | Return health/liveness status |
+| `/control-packs` | GET | Return available control packs |
+| `/profile-file` | POST | Profile uploaded file and return suggested columns |
+| `/scan-file` | POST | Run full deterministic validation scan |
+
+---
+
+## 4. File Intake Requirements
+
+The system should support:
+
+- CSV files
+- XLSX files
+- Optional XLSX sheet selection
+- UTF-8 BOM handling
+- Encoding fallback handling where practical
+- Header-only file handling
+- Empty file handling
+- Unsupported file rejection
+- Corrupt XLSX rejection
+- Oversized file rejection
+
+The system should avoid silent data corruption where practical by preserving original values, warning clearly, or returning controlled errors.
+
+---
+
+## 5. Default Control Pack Requirements
+
+The default control pack is:
+
+```text
+finance_transaction_controls
