@@ -1,2 +1,14 @@
 ##Dirty Trade Sample Data - Finance Data Quality Rule Engine
-##Copyright © 2026 Tripp Parker 
+##Copyright © 2026 Tripp Parker
+
+transaction_id,account_id,trade_date,settlement_date,amount,margin_pct,status,source_system,region,product_type
+T1001,A001,2026-01-02,2026-01-04,1250.50,0.10,Approved,GL,NA,Equity
+T1002,A002,2026-01-03,2026-01-05,-250.00,0.08,Pending,TradeCapture,NA,FX
+T1002,A003,bad-date,2026-01-06,500.00,0.12,Approved,GL,EMEA,Fixed Income
+T1004,,2026-01-05,2026-01-07,750.00,0.07,Review,Subledger,APAC,Derivative
+T1005,A005,not-a-date,2026-01-08,300.00,0.09,Approved,,NA,Equity
+T1006,A006,45392,2026-01-09,1000.00,0.11,Pending,GL,EMEA,FX
+T1007,,2026-01-08,2026-01-10,250.00,0.06,Approved,Subledger,NA,Equity
+T1008,A008,2026-01-09,2026-01-11,900.00,0.15,Pending ,TradeCapture,APAC,Derivative
+T1009,A009,2026-01-10,2026-01-12,2000000.00,0.20,Approved,GL,NA,Fixed Income
+T1009,A009,2026-01-10,2026-01-12,2000000.00,0.20,Approved,GL,NA,Fixed Income
