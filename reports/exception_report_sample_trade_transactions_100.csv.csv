@@ -1,0 +1,11 @@
+control_id,control_name,status,affected_columns,affected_row_count,exception_detail,audit_note
+C001,C001_REQUIRED_FIELDS,failed,account_id; amount; source_system,3,"{""account_id"": {""issue"": ""missing_values"", ""missing_count"": 1}, ""amount"": {""issue"": ""missing_values"", ""missing_count"": 1}, ""source_system"": {""issue"": ""missing_values"", ""missing_count"": 1}}",3 of 5 required fields have issues.
+C002,C002_TRANSACTION_ID_UNIQUENESS,failed,transaction_id,4,"{""duplicate_row_count"": 4, ""duplicate_value_count"": 2}",2 duplicate transaction_id value(s) across 4 row(s).
+C003,C003_DATE_VALIDITY,failed,trade_date,3,"{""invalid_date_count"": 3, ""excel_serial_date_warning"": ""1 value(s) in 'trade_date' are numeric in the 30000\u201360000 range \u2014 possible Excel serial dates.""}",3 invalid date(s) in trade_date.
+C004,C004_AMOUNT_NUMERIC_VALIDITY,passed,,0,{},All amount values are numeric.
+C005,C005_AMOUNT_REASONABLENESS,failed,amount,2,"{""negative_count"": 1, ""excessive_count"": 1}","1 negative and 1 excessive (>1,000,000) amount value(s)."
+C006,C006_MARGIN_PCT_VALIDITY,passed,,0,{},All margin_pct values are numeric and within 0–1.
+C007,C007_SOURCE_SYSTEM_COMPLETENESS,failed,source_system,1,"{""missing_or_blank_count"": 1}",1 row(s) have missing or blank source_system.
+C008,C008_LONG_IDENTIFIER_PRECISION_RISK,warning,transaction_id,100,"{""long_id_columns"": {""transaction_id"": 100}}",1 column(s) contain long numeric identifiers (≥15 digits) — preserved as strings to avoid precision loss.
+C009,C009_STRING_HYGIENE,warning,status,1,"{""whitespace_by_column"": {""status"": 1}}",1 column(s) have leading/trailing whitespace in string values.
+C010,C010_DUPLICATE_ROW_RECONCILIATION_RISK,failed,,1,"{""duplicate_row_count"": 1}",1 fully duplicate row(s) detected — reconciliation risk.
