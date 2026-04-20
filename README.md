@@ -1,4 +1,5 @@
-Finance Data Quality Rule Engine — v1
+##Finance Data Quality Rule Engine — v1
+##Copyright © 2026 Tripp Parker 
 
 Status: Work in Progress / v1 Prototype Freeze Candidate
 Project Type: Python/FastAPI finance data governance prototype
