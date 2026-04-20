@@ -1,2 +1,4 @@
 ##Header Only - Finance Data Quality Rule Engine
 ##Copyright © 2026 Tripp Parker 
+
+transaction_id,account_id,trade_date,settlement_date,amount,margin_pct,status,source_system,region,product_type
