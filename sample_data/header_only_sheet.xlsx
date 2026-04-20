@@ -1,2 +1,6 @@
 ##Header Only Sheet: XLSX - Finance Data Quality Rule Engine
 ##Copyright © 2026 Tripp Parker 
+
+##The use-case for Header Only Sheet, XLSX would contain a single Excel file with only the documented headers belw
+
+transaction_id,account_id,trade_date,settlement_date,amount,margin_pct,status,source_system,region,product_type
