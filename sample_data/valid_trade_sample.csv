@@ -1,2 +1,12 @@
 ##Valid Trade Sample Data - Finance Data Quality Rule Engine
 ##Copyright © 2026 Tripp Parker 
+
+transaction_id,account_id,trade_date,settlement_date,amount,margin_pct,status,source_system,region,product_type
+T2001,A101,2026-01-02,2026-01-04,1250.50,0.10,Approved,GL,NA,Equity
+T2002,A102,2026-01-03,2026-01-05,2500.00,0.12,Pending,TradeCapture,NA,FX
+T2003,A103,2026-01-04,2026-01-06,750.25,0.08,Approved,Subledger,EMEA,Fixed Income
+T2004,A104,2026-01-05,2026-01-07,9800.00,0.15,Review,GL,APAC,Derivative
+T2005,A105,2026-01-06,2026-01-08,300.00,0.09,Approved,TradeCapture,NA,Equity
+T2006,A106,2026-01-07,2026-01-09,1000.00,0.11,Pending,Subledger,EMEA,FX
+T2007,A107,2026-01-08,2026-01-10,450.75,0.06,Approved,GL,NA,Equity
+T2008,A108,2026-01-09,2026-01-11,900.00,0.14,Approved,TradeCapture,APAC,Derivative
