@@ -403,3 +403,5 @@ This project should is not represented as production-ready, enterprise-certified
 Next build:
 
 Finance Data Quality Rule Engine — v2: Baseline vs Current File Comparison / Signal Governance Edition
+
+Companion project: Finance Data Quality Exception Tracker - Excel Control Workbook (review and remediation workflow)
